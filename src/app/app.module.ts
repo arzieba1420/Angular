@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import {RouterModule, Routes} from "@angular/router";
 import { UserInfoComponent } from './user-info/user-info.component';
 import {FormsModule} from "@angular/forms";
+import { UserAddFormComponent } from './user-info/user-add-form/user-add-form.component';
 
 const appRoutes: Routes= [
   {path: 'contact',component: ContactComponent},
@@ -20,7 +21,8 @@ const appRoutes: Routes= [
     HeaderComponent,
     ContactComponent,
     HomeComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    UserAddFormComponent
   ],
   imports: [
     BrowserModule,
