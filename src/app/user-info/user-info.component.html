@@ -1,0 +1,23 @@
+<h1>Witaj użytkowniku, {{name}}</h1>
+<button (click)="deleteUser()" [disabled]="isDisabled()" class="uk-button uk-button-primary" >Wyloguj</button>
+<div>
+  <input [(ngModel)]="name2" class="uk-input uk-width-1-2" type="text">
+</div>
+<p *ngIf="showP">{{name2}}</p>
+
+<hr>
+<br>
+<br>
+
+<div [ngClass]="{'uk-card-primary':showPrimary(user.age)}" *ngFor="let user of userArray" class="uk-card uk-card-default uk-width-1-3 uk-margin">
+
+    <div class="uk-card-header">
+        <h3 class="uk-card-title">{{user.firstName +' '+ user.lastName}}</h3>
+    </div>
+
+  <div class="uk-card-body">
+    <p>Wiek: {{user.age}}</p>
+    <p>Miasto: {{user.city}}</p>
+  </div>
+
+</div>

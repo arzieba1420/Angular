@@ -6,6 +6,8 @@ import {HeaderComponent} from "./header/header.component";
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule, Routes} from "@angular/router";
+import { UserInfoComponent } from './user-info/user-info.component';
+import {FormsModule} from "@angular/forms";
 
 const appRoutes: Routes= [
   {path: 'contact',component: ContactComponent},
@@ -17,11 +19,13 @@ const appRoutes: Routes= [
     AppComponent,
     HeaderComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
